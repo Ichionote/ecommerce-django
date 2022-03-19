@@ -1,8 +1,7 @@
 from django.contrib import admin
-
-from accounts.models import Account
-from django.contrib.auth.admin import UserAdmin
 from .models import Account
+from django.contrib.auth.admin import UserAdmin
+
 
 class AccountAdmin(UserAdmin):
     list_display = ('email','first_name','last_name','username', 'last_login','date_joined','is_active')
